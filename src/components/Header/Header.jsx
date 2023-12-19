@@ -1,0 +1,3 @@
+Header = () => {};
+
+export default Header;

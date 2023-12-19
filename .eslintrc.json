@@ -1,0 +1,55 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module", // Add this line
+    "jsx": true
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "indent": "off", // is handled by prettier
+    "no-tabs": 0, // was giving errors for all identations. So, have setup an identation rule on the above line
+    "no-mixed-spaces-and-tabs": 0, // was giving errors for all identations. So, have setup an identation rule on the above line
+    "no-underscore-dangle": "off", // issues with _id
+    "no-shadow": "off",
+    "import/prefer-default-export": "off",
+    "no-undef": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/prop-types": "off"
+  }
+}
